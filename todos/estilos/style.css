@@ -7,7 +7,7 @@
 	outline: none;
 }
 body{
-	background-color: rgb(230,230,250);
+	background-color: #87CEFA;
 }
 nav {
 	background-color: white;
@@ -23,18 +23,18 @@ a {
 }
 h1 {
 	font-size: 2rem;
-	color: black;
+	color: #1E90FF;
 }
 #buscar {
 	max-width: 400px;
 	border-radius: 25px;
 	margin-top: 10px;
-	background: #DCDCDC;
+	background: #F5F5F5;
 }
 #buscar input {
 	max-width: 400px;
 	border-radius: 25px;
-	background-color: #DCDCDC;
+	background-color: #F5F5F5;
 	font-size: 0.8rem;
 	padding: 8px 10px;
 	border: none;
@@ -44,7 +44,7 @@ h1 {
 	margin-left: -10px;
 	padding-right: 5px;
 	margin-right: 5px;
-	color: white;
+	color: #1E90FF;
 	background: none;
 	border-radius: 50px;
 	border: none;
@@ -55,8 +55,41 @@ h1 {
 	display: flex;
 }
 .links p {
-	color: grey;
+	color: #1E90FF;
 	padding: 5px;
 	margin-left: 50px;
 	cursor: pointer;
+}
+
+/*section*/
+section {
+	max-width: 100%;
+	margin: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.todo {
+	max-width: 500px;
+}
+#check {
+	display: none;
+}
+#check + label:before {
+	content: '';
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	border-radius: 3px;
+	margin-right: 5px;
+	border: 2px solid gray;
+	margin-bottom: -3px;
+}
+#check:checked + label:before {
+	background: gray;
+
+}
+.todo label {
+	padding: 10px;
+	background: white;
 }
