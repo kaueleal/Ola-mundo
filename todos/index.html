@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>ToDos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estilos/style.css">
+	<link rel="stylesheet" href="estilos/modal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav>
+		<a href="index.html"><h1>ToDos</h1></a>
+		<div id="buscar">
+			<input type="text" placeholder="Search ToDo">
+			<button><i class="fa fa-search"></i></button>
+		</div>
+		<div class="links">
+			<p id="add">Add</p>
+			<p>Select all</p>
+		</div>
+	</nav>
+
+	<div id="modal-add" class="modal-container">
+		<div class="modal">
+			<button class="fechar">x</button>
+			<h3>Add a new task!</h3>
+			<form>
+				<input type="text" placeholder="What are you going to do?">
+				<button>Add</button>
+			</form>
+		</div>
+	</div>
+	<script src="script/modal.js"></script>
+</body>
+</html>

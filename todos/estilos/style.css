@@ -1,0 +1,62 @@
+*{
+	font-family: arial, sans-serif;
+	font-size: 16pt;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	outline: none;
+}
+body{
+	background-color: rgb(230,230,250);
+}
+nav {
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 80px;
+	padding: 20px 20px;
+}
+a {
+	text-decoration: none;
+}
+h1 {
+	font-size: 2rem;
+	color: black;
+}
+#buscar {
+	max-width: 400px;
+	border-radius: 25px;
+	margin-top: 10px;
+	background: #DCDCDC;
+}
+#buscar input {
+	max-width: 400px;
+	border-radius: 25px;
+	background-color: #DCDCDC;
+	font-size: 0.8rem;
+	padding: 8px 10px;
+	border: none;
+	font-style: italic;
+}
+#buscar button {
+	margin-left: -10px;
+	padding-right: 5px;
+	margin-right: 5px;
+	color: white;
+	background: none;
+	border-radius: 50px;
+	border: none;
+	cursor: pointer;
+}
+.links {
+	margin-top: 10px;
+	display: flex;
+}
+.links p {
+	color: grey;
+	padding: 5px;
+	margin-left: 50px;
+	cursor: pointer;
+}
