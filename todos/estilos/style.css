@@ -7,7 +7,7 @@
 	outline: none;
 }
 body{
-	background-color: #87CEFA;
+	background-color: #1E90FF;
 }
 nav {
 	background-color: white;
@@ -17,6 +17,7 @@ nav {
 	align-items: center;
 	min-height: 80px;
 	padding: 20px 20px;
+	border-bottom: 1px solid #1E90FF;
 }
 a {
 	text-decoration: none;
@@ -72,24 +73,57 @@ section {
 .todo {
 	max-width: 500px;
 }
-#check {
-	display: none;
+.lista {
+	list-style: none;
 }
-#check + label:before {
-	content: '';
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	border-radius: 3px;
-	margin-right: 5px;
-	border: 2px solid gray;
-	margin-bottom: -3px;
+.template {
+	display: flex;
 }
-#check:checked + label:before {
-	background: gray;
-
-}
-.todo label {
+.template label {
+	cursor: pointer;
 	padding: 10px;
+	position: relative;
+}
+.template div {
+	padding: 10px;
+	background-color: white;
+}
+#check {
+	top: 5px;
+	left: -40px;
+	position: relative;
+	cursor: pointer;
+}
+#check:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
 	background: white;
+	border: 2px solid #1E90FF;
+	top: -3.5px;
+	left: -10px;
+}
+#check:checked:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: #32CD32;
+}
+#check:checked:after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 20px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	top: 4px;
+	left: 8px;
 }
