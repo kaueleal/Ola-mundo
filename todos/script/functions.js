@@ -1,28 +1,3 @@
-// const div = document.querySelector('.options')
-// const label = document.querySelector('.template label')
-
-// //desculpe o amadorismo
-// var ponto = 1
-// label.onclick = function() {	
-// 	if (ponto != 1) {
-// 		div.classList.add('hidden')
-// 		ponto = 1
-// 	} else {
-// 		div.classList.remove('hidden')
-// 		ponto = 2
-// 	}
-// }
-// var point = 1
-// document.querySelector('#check').onclick = function() {	
-// 	if (point != 1) {
-// 		div.classList.add('hidden')
-// 		point = 1
-// 	} else {
-// 		div.classList.remove('hidden')
-// 		point = 2
-// 	}
-// }
-
 const btn = document.querySelector('form #btn')
 let inputElement = document.querySelector('form #campo')
 const lista = document.querySelector('.lista')
@@ -40,10 +15,12 @@ function renderTodos() {
 
 		let linkElement = document.createElement('a')
 		linkElement.setAttribute('href', '#')
-		let linkText = document.createTextNode('Excluir')
+		let linkText = document.createElement('i')
 
 		linkElement.setAttribute('onclick', `removeTodo(${pos})`)
 		liElement.classList.add('template')
+		linkText.classList.add('fas')
+		linkText.classList.add('fa-trash-alt')
 
 		label.appendChild(todoText)
 		linkElement.appendChild(linkText)
@@ -66,6 +43,13 @@ function removeTodo(pos) {
 	renderTodos()
 	saveToStorage()
 }
+function removeAll() {
+	todos = []
+	renderTodos()
+	saveToStorage()
+}
+let removeall = document.querySelector('#removeall')
+removeall.addEventListener('click', removeAll)
 
 function saveToStorage() {
 	localStorage.setItem('li_todos', JSON.stringify(todos))
