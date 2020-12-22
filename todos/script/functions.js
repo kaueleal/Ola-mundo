@@ -13,23 +13,24 @@ function renderTodos() {
 		let label = document.createElement('label')
 		let pos = todos.indexOf(todo)
 
-		let linkElement = document.createElement('a')
-		linkElement.setAttribute('href', '#')
-		let linkText = document.createElement('i')
+		let removeElement = document.createElement('a')
+		removeElement.setAttribute('href', '#')
+		let removeText = document.createElement('i')
 
-		linkElement.setAttribute('onclick', `removeTodo(${pos})`)
+		removeElement.setAttribute('onclick', `removeTodo(${pos})`)
 		liElement.classList.add('template')
-		linkText.classList.add('fas')
-		linkText.classList.add('fa-trash-alt')
+		removeText.classList.add('fas')
+		removeText.classList.add('fa-trash-alt')
 
 		label.appendChild(todoText)
-		linkElement.appendChild(linkText)
+		removeElement.appendChild(removeText)
 		div.appendChild(label)
-		div.appendChild(linkElement)
+		div.appendChild(removeElement)
 		liElement.appendChild(div)
 		lista.appendChild(liElement)
 	}
 }
+
 function addTodo() {
 	todos.push(inputElement.value)
 	inputElement.value = ""
