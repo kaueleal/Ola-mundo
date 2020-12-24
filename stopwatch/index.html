@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="kstopwatch.css">
+	<title>KStopwatch</title>
+</head>
+<body>
+	<div class="image">
+		<img src="cronometro.png">
+	</div>
+	<section>
+		<div class="stopwatch">
+			<h1>Stopwatch</h1>
+			<div class="counter-container">
+				<p class="counter">00:00:00</p>
+			</div>
+			<div class="btn">
+				<button class="start" onclick="start()">Start</button>
+				<button class="pause" onclick="pause()">Pause</button>
+				<button class="stop" onclick="stop()">Stop</button>
+			</div>
+		</div>
+		<div class="timer">
+			<h1>Timer</h1>
+			<div class="counter-container">
+				<input type="text" id="counter-content" value="00:00:00">
+			</div>
+			<div class="btn">
+				<button class="start" onclick="startTimer()">Start</button>
+				<button class="pause" onclick="pauseTimer()">Pause</button>
+				<button class="stop" onclick="stopTimer()">Stop</button>
+			</div>
+		</div>
+		<div class="watch">
+			<h1>Watch</h1>
+		</div>		
+	</section>
+	<script src="stopwatch.js"></script>
+	<script src="timer.js"></script>
+</body>
+</html>
