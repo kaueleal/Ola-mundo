@@ -10,11 +10,13 @@ let btnStop = document.querySelector('.btn .stop')
 
 function start() {
 	cron = setInterval(()=>{stopWatch()}, 1000)
-	btnStart.setAttribute('disabled', '')
+	btnPause.classList.remove('btnHidden')
+	btnStart.classList.add('btnHidden')
 }
 function pause() {
 	clearInterval(cron)
-	btnStart.removeAttribute('disabled', '')
+	btnPause.classList.add('btnHidden')
+	btnStart.classList.remove('btnHidden')
 }
 function stop() {
 	clearInterval(cron)
@@ -22,6 +24,8 @@ function stop() {
 	minuto = 0
 	segundo = 0
 	document.querySelector('.counter-container .counter').innerText="00:00:00"
+	btnPause.classList.add('btnHidden')
+	btnStart.classList.remove('btnHidden')
 }
 function stopWatch() {
 	segundo++

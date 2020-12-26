@@ -27,19 +27,22 @@ function startTimer() {
 	p1.style.display = 'none'
 	p2.style.display = 'none'
 	counter.style.display = 'block'
-	butStart.setAttribute('disabled', '')
+	butStart.setAttribute('class', 'btnHidden')
+	butPause.removeAttribute('class', 'btnHidden')
 	time = setInterval(()=>{timer()}, 1000)
 }
 function pauseTimer() {
 	clearInterval(time)
-	butStart.removeAttribute('disabled', '')
+	butPause.setAttribute('class', 'btnHidden')
+	butStart.removeAttribute('class', 'btnHidden')
 	inputHour.value = hh
 	inputMin.value = mm
 	inputSeg.value = ss
 }
 function stopTimer() {
 	clearInterval(time)
-	butStart.removeAttribute('disabled', '')
+	butPause.setAttribute('class', 'btnHidden')
+	butStart.removeAttribute('class', 'btnHidden')
 	document.querySelector('#counter-container label').style.display = 'none'
 	inputHour.style.display = 'block'
 	inputMin.style.display = 'block'
