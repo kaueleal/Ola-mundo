@@ -89,3 +89,7 @@ h1 {
 .stop, #stop {
 	background: orange;
 }
+#watch {
+	font-size: 2rem;
+	text-align: center;
+}
