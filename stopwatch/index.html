@@ -17,20 +17,22 @@
 				<p class="counter">00:00:00</p>
 			</div>
 			<div class="btn">
-				<button class="start" onclick="start()">Start</button>
-				<button class="pause" onclick="pause()">Pause</button>
-				<button class="stop" onclick="stop()">Stop</button>
+				<button class="start">Start</button>
+				<button class="pause">Pause</button>
+				<button class="stop">Stop</button>
 			</div>
 		</div>
 		<div class="timer">
 			<h1>Timer</h1>
-			<div class="counter-container">
-				<input type="text" id="counter-content" value="00:00:00">
+			<div id="counter-container">
+				<input type="text" class="counter-content" id="hora" placeholder="00" maxlength="2"><p id="p1">:</p>
+				<input type="text" class="counter-content" id="minuto" placeholder="00" maxlength="2"><p id="p2">:</p>
+				<input type="text" class="counter-content" id="segundo" placeholder="00" maxlength="2">
 			</div>
 			<div class="btn">
-				<button class="start" onclick="startTimer()">Start</button>
-				<button class="pause" onclick="pauseTimer()">Pause</button>
-				<button class="stop" onclick="stopTimer()">Stop</button>
+				<button id="start">Start</button>
+				<button id="pause">Pause</button>
+				<button id="stop">Stop</button>
 			</div>
 		</div>
 		<div class="watch">

@@ -43,7 +43,7 @@ h1 {
 	margin-bottom: 20px;
 }
 
-.counter-container {
+.counter-container, #counter-container {
 	width: 285px;
 	height: 50px;
 	font-size: 2.5rem;
@@ -53,12 +53,17 @@ h1 {
 	margin: 0 auto;
 	background: white;
 }
-.counter-container input {
+#counter-container input {
 	background: none;
 	border: none;
 	text-align: right;
-	width: 285px;
+	width: 50px;
 	font-size: 2.5rem;
+	margin-bottom: -5px;
+}
+#counter-container {
+	display: flex;
+	justify-content: flex-end;
 }
 .btn {
 	margin-top: 50px;
@@ -66,20 +71,21 @@ h1 {
 	display: flex;
 	justify-content: space-around;
 }
-.start, .pause, .stop {
+.start, .pause, .stop, #start, #pause, #stop {
 	width: 80px;
 	padding: 10px;
 	font-size: 1.2rem;
 	color: white;
 	border: 2px solid #FFFFFF;
 	cursor: pointer;
+	border-radius: 5px;
 }
-.start {
+.start, #start {
 	background: green;
 }
-.pause {
+.pause, #pause {
 	background: red;
 }
-.stop {
+.stop, #stop {
 	background: orange;
 }
