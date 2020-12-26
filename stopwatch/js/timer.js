@@ -16,13 +16,11 @@ let counter = document.createElement('label')
 counter.classList.add('counter')
 counter.style.display = 'none'
 divElement.appendChild(counter)
+
 function startTimer() {
-	hh = inputHour.value
-	mm =inputMin.value
-	ss = inputSeg.value
-	hh = Number(hh)
-	mm = Number(mm)
-	ss = Number(ss)
+	hh = Number(inputHour.value)
+	mm = Number(inputMin.value)
+	ss = Number(inputSeg.value)
 	inputHour.style.display = 'none'
 	inputMin.style.display = 'none'
 	inputSeg.style.display = 'none'
@@ -35,12 +33,12 @@ function startTimer() {
 function pauseTimer() {
 	clearInterval(time)
 	butStart.removeAttribute('disabled', '')
+	inputHour.value = hh
+	inputMin.value = mm
+	inputSeg.value = ss
 }
 function stopTimer() {
 	clearInterval(time)
-	hh = 0
-	mm = 0
-	ss = 0
 	butStart.removeAttribute('disabled', '')
 	document.querySelector('#counter-container label').style.display = 'none'
 	inputHour.style.display = 'block'
@@ -70,7 +68,7 @@ function timer() {
 				}
 			}
 		}
-		ss--		
+		ss--
 	}
 
 	let format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss)

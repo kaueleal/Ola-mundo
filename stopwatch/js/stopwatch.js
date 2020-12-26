@@ -10,9 +10,11 @@ let btnStop = document.querySelector('.btn .stop')
 
 function start() {
 	cron = setInterval(()=>{stopWatch()}, 1000)
+	btnStart.setAttribute('disabled', '')
 }
 function pause() {
 	clearInterval(cron)
+	btnStart.removeAttribute('disabled', '')
 }
 function stop() {
 	clearInterval(cron)

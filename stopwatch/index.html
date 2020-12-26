@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="kstopwatch.css">
+	<link rel="stylesheet" href="css/kstopwatch.css">
 	<title>KStopwatch</title>
 </head>
 <body>
 	<div class="image">
-		<img src="cronometro.png">
+		<img src="img/cronometro.png">
 	</div>
 	<section>
 		<div class="stopwatch">
@@ -27,7 +27,7 @@
 			<div id="counter-container">
 				<input type="text" class="counter-content" id="hora" placeholder="00" maxlength="2"><p id="p1">:</p>
 				<input type="text" class="counter-content" id="minuto" placeholder="00" maxlength="2"><p id="p2">:</p>
-				<input type="text" class="counter-content" id="segundo" placeholder="00" maxlength="2">
+				<input type="text" class="counter-content" id="segundo" placeholder="00" maxlength="2" min="1">
 			</div>
 			<div class="btn">
 				<button id="start">Start</button>
@@ -39,7 +39,7 @@
 			<h1>Watch</h1>
 		</div>		
 	</section>
-	<script src="stopwatch.js"></script>
-	<script src="timer.js"></script>
+	<script src="js/stopwatch.js"></script>
+	<script src="js/timer.js"></script>
 </body>
 </html>
